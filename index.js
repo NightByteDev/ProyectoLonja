@@ -14,6 +14,7 @@ app.use('/api/lotes', require('./routes/loteRoutes'));
 app.use('/api/tipos', require('./routes/tipoRoutes'));
 app.use('/api/especie', require('./routes/especieRoutes'));
 app.use('/api/compra', require('./routes/compraRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 async function main() {
     try {
