@@ -26,6 +26,10 @@ const Comprador = sequelize.define('Comprador', {
     correo: {
         type: DataTypes.STRING(80),
         unique: true
+    },
+    password: {
+        type: DataTypes.STRING(100),
+        allowNull: true
     }
 }, {
     tableName: 'comprador',

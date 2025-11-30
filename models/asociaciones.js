@@ -3,20 +3,23 @@ const Lote = require('./Lote');
 const Comprador = require('./Comprador');
 const Especie = require('./Especie');
 const Compra = require('./Compra');
+const Administrador = require('./Administrador'); 
 
-// Relación: Un Tipo tiene muchas Especies
+//Definir las Relaciones
+
+// Tipo -> Especie
 Tipo.hasMany(Especie, { foreignKey: 'id_tpo' });
 Especie.belongsTo(Tipo, { foreignKey: 'id_tpo' });
 
-// Relación: Un Lote tiene muchas Especies
+// Lote -> Especie
 Lote.hasMany(Especie, { foreignKey: 'id_lte' });
 Especie.belongsTo(Lote, { foreignKey: 'id_lte' });
 
-// Relación: Un Comprador hace muchas Compras
+// Comprador -> Compra
 Comprador.hasMany(Compra, { foreignKey: 'codigo_cpr' });
 Compra.belongsTo(Comprador, { foreignKey: 'codigo_cpr' });
 
-// Relación: Un Lote puede estar en muchas Compras
+// Lote -> Compra
 Lote.hasMany(Compra, { foreignKey: 'id_lte' });
 Compra.belongsTo(Lote, { foreignKey: 'id_lte' });
 
@@ -25,5 +28,6 @@ module.exports = {
     Lote,
     Comprador,
     Especie,
-    Compra
+    Compra,
+    Administrador
 };

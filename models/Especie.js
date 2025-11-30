@@ -12,7 +12,7 @@ const Especie = sequelize.define('Especie', {
         allowNull: true
     },
     imagen: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: true
     },
 
@@ -29,7 +29,7 @@ const Especie = sequelize.define('Especie', {
             model: 'tipo',
             key: 'id_tpo'
         }
-    }
+    },
 }, {
     tableName: 'especie',
     timestamps: false
