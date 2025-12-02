@@ -37,11 +37,7 @@ const login = async (req, res) => {
 
         res.json({ 
             mensaje: `Hola ${usuario.nombre}`, 
-            usuario: { 
-                id: usuario.codigo_cpr, 
-                nombre: usuario.nombre, 
-                rol: 'comprador' 
-            } 
+            usuario: {id: usuario.codigo_cpr, nombre: usuario.nombre, rol: 'comprador'} 
         });
     } catch (error) {
         console.error(error);
