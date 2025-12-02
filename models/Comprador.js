@@ -28,12 +28,13 @@ const Comprador = sequelize.define('Comprador', {
         unique: true
     },
     password: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.STRING(255),
         allowNull: true
     }
 }, {
     tableName: 'comprador',
     timestamps: false
+    
 });
 
 module.exports = Comprador;
